@@ -4,6 +4,7 @@ namespace TechJobsOO
     public class Job
     {
         public int Id { get; }
+      
         private static int nextId = 1;
 
         public string Name { get; set; }

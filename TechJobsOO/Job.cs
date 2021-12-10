@@ -43,5 +43,28 @@ namespace TechJobsOO
             {
             return HashCode.Combine(Id);
             }
+        public override string ToString()
+            {
+            return "\nID: " + Id +
+                   $"\nName: {ValueChecker(Name)}" +
+                   $"\nEmployer: {ValueChecker(EmployerName.Value)}" +
+                   $"\nLocation: {ValueChecker(EmployerLocation.Value)}" +
+                   $"\nPosition Type: {ValueChecker(JobType.Value)}" +
+                   $"\nCore Competency: {ValueChecker(JobCoreCompetency.Value)}" +
+                   "\n";
+            }
+
+        private string ValueChecker( string item)
+            {
+             if (item == "")
+                {
+                return "Data not available";
+                }
+            else
+                {
+                return item;
+                }
+                
+            }
         }
 }

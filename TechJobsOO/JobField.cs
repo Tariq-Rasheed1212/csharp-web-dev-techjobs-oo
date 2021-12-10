@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TechJobsOO
     {
-    public class JobField
+    public abstract class JobField
     {
         public int Id { get; }
         private static int nextId = 1;
@@ -23,8 +23,8 @@ namespace TechJobsOO
 
         public override bool Equals(object obj)
         {
-            return obj is Employer employer &&
-                   Id == employer.Id;
+            return obj is JobField jobField &&
+                   Id == jobField.Id;
         }
 
         public override int GetHashCode()
